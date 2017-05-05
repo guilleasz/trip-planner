@@ -1,0 +1,130 @@
+$navbar: #7b2d26;
+$color-beige: #d7c9AA;
+
+body{
+  background-color: $color-beige;
+  height: 100vh;
+}
+
+#app, .container-fluid, .container-fluid>.row, .map, .selections{
+  height: 100%;
+}
+
+.map {
+  @media (min-width: 992px) {
+     padding-right: 0;
+    padding-left: 0;
+  }
+
+
+}
+
+#map-canvas {
+  height: 100%;
+}
+
+.selections {
+  background: $color-beige;
+  color: darken($navbar, 10%);
+  min-height: 700px;
+  padding-top: 30px;
+  border-radius: 10px;
+}
+
+.dayHeader, .more-days {
+  text-align: center;
+  padding: 10px 0
+}
+
+.more-days {
+  background: $navbar;
+  .btn-primary {
+    border: 3px solid lighten($navbar, 15%);
+    &:hover{
+      background-color: lighten($navbar, 15%);
+    }
+  }
+}
+
+.btn-danger{
+  background-color: lighten($navbar, 5%);
+  border: 0;
+  &:hover {
+    background: lighten($navbar, 20%);
+  }
+}
+
+.panel {
+  border:0;
+}
+
+.panel-body, .box {
+  background: lighten($color-beige, 18%);
+  padding: 10px;
+  padding-left: 25px;
+  border-radius: 10px;
+  h3 {
+    color: lighten($navbar, 5%)
+  }
+  ul {
+    list-style: none
+  }
+}
+
+.btn-primary {
+  background: $navbar;
+  border: 0
+}
+
+.btn-circle {
+  border-radius: 24px
+}
+
+.btn-xs {
+  font-size: 10px
+}
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-default {
+  background-color: $navbar;
+  border: 0;
+  border-radius: 0;
+  .navbar-brand {
+    color: $color-beige;
+    &:hover {
+      color: $color-beige;
+    }
+  }
+  .navbar-nav {
+    li {
+      a {
+        color: $color-beige;
+        &:hover {
+          color: darken($color-beige, 20%);
+        }
+      }
+    }
+    .active {
+      a {
+        color: $color-beige;
+        background-color: darken($navbar, 10%);
+          &:hover{
+          color: darken($color-beige, 20%);
+          background-color: darken($navbar, 10%)
+          }
+      }
+    }
+  }
+}
+
+
+
+
+.form-control {
+  display: inline;
+  width: 60%;
+}
+
+
+

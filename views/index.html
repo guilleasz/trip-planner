@@ -1,0 +1,75 @@
+{% extends 'layout.html' %} {% block title %}Your Trip{% endblock %} {% block
+content %}
+<div id="app" class="clearfix">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-8 map">
+        <div id="map-canvas"></div>
+      </div>
+      <div class="col-md-4 selections">
+        <div class="row">
+          <div class="col-md-12 col-sm-6">
+            <div class="newDay box">
+              <h3>Hotel</h3>
+              <select class="form-control">
+                {% for hotel in hotels %}
+                <option value="{{hotel.id}}">{{hotel.name}}</option>
+                {% endfor %}
+              </select>
+              <button class="btn btn-danger btn-circle btn-xs">X</button>
+              <h3>Restaurant</h3>
+              <select class="form-control">
+                {% for restaurant in restaurants %}
+                <option value="{{restaurant.id}}">{{restaurant.name}}</option>
+                {% endfor %}
+              </select>
+              <button class="btn btn-danger btn-circle btn-xs">X</button>
+              <h3>Activity</h3>
+              <select class="form-control">
+                {% for activity in activities %}
+                <option value="{{activity.id}}">{{activity.name}}</option>
+                {% endfor %}
+              </select>
+              <button class="btn btn-danger btn-circle btn-xs">X</button>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-6">
+            <h2 class="dayHeader"> Day 2 <button class="btn btn-danger btn-circle btn-xs">X</button> </h2>
+            <div>
+              <div class="thisDay panel">
+                <div class="more-days panel-heading">
+                  <button class="btn btn-primary btn-circle">1</button>
+                  <button class="btn btn-primary btn-circle">2</button>
+                  <button class="btn btn-primary btn-circle">3</button>
+                  <button class="btn btn-primary btn-circle">+</button>
+                </div>
+                <div class="panel-body">
+                  <h3>My Hotel</h3>
+                  <ul>
+                    <li>Hotel Mulberry
+                      <button class="btn btn-danger btn-circle btn-xs">X</button>
+                    </li>
+                  </ul>
+                  <h3>My Restaurants</h3>
+                  <ul>
+                    <li>Marc Forgione
+                      <button class="btn btn-danger btn-circle btn-xs">X</button>
+                    </li>
+                  </ul>
+                  <h3>My Activities </h3>
+                  <ul>
+                    <li>Ground Zero
+                      <button class="btn btn-danger btn-circle btn-xs">X</button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
